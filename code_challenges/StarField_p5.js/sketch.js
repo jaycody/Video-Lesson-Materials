@@ -7,6 +7,7 @@ var speed;
 
 function setup() {
   createCanvas(600, 600);
+  translate(width / 2, height / 2);
   for (var i = 0; i < 800; i++) {
     stars[i] = new Star();
   }
@@ -20,6 +21,8 @@ function draw() {
     stars[i].update();
     stars[i].show();
   }
+  //reset the origin
+  translate(-width / 2, -height / 2);
 }
 
 // Daniel Shiffman
